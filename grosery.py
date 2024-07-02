@@ -65,33 +65,33 @@ class Tienda:
         self.inventario = []
         self.ganancias = 0
     
-    def agregar_producto(self):
-        print("Agregue un produto a la tienda -------------------")
-        product_type = int(input("1. Hogar, 2. Tecnologico, 3. Ropa: "))
-        nombre = input("Ingrese el nombre del producto: ")
-        precio = int(input("Ingrese el precio del producto: "))
-        cantidad = int(input("Ingrese la cantidad: "))
+    # def agregar_producto(self):
+    #     print("Agregue un produto a la tienda -------------------")
+    #     product_type = int(input("1. Hogar, 2. Tecnologico, 3. Ropa: "))
+    #     nombre = input("Ingrese el nombre del producto: ")
+    #     precio = int(input("Ingrese el precio del producto: "))
+    #     cantidad = int(input("Ingrese la cantidad: "))
 
-        if product_type == 1:
-            ancho = int(input("Introducir ancho: "))
-            alto = int(input("Introducir alto: "))
-            peso = int(input("Introducir peso: "))
-            self.agregar_a_inventario(ProductoHogar(nombre, precio, cantidad, ancho, alto, peso))
-        elif product_type == 2:
-            ram = input("Introducir ram: ")
-            procesador = input("Introducir procesador: ")
-            pantalla = input("Introducir pantalla")
-            self.agregar_a_inventario(ProductoTecnologico(nombre, precio, cantidad, ram, procesador, pantalla))
-        elif product_type == 3:
-            talla = input("Introducir talla: ")
-            material = input("Introducir material: ")
-            self.agregar_a_inventario(ProductoRopa(nombre, precio, cantidad, talla, material))
-        else:
-            print("Tipo no valido :(")
-        print("-" * 20, "Producto agregado")
-        continuar = input("Agregar otro producto? Y/N")
-        if continuar == "y":
-            self.agregar_producto()
+    #     if product_type == 1:
+    #         ancho = int(input("Introducir ancho: "))
+    #         alto = int(input("Introducir alto: "))
+    #         peso = int(input("Introducir peso: "))
+    #         self.agregar_a_inventario(ProductoHogar(nombre, precio, cantidad, ancho, alto, peso))
+    #     elif product_type == 2:
+    #         ram = input("Introducir ram: ")
+    #         procesador = input("Introducir procesador: ")
+    #         pantalla = input("Introducir pantalla")
+    #         self.agregar_a_inventario(ProductoTecnologico(nombre, precio, cantidad, ram, procesador, pantalla))
+    #     elif product_type == 3:
+    #         talla = input("Introducir talla: ")
+    #         material = input("Introducir material: ")
+    #         self.agregar_a_inventario(ProductoRopa(nombre, precio, cantidad, talla, material))
+    #     else:
+    #         print("Tipo no valido :(")
+    #     print("-" * 20, "Producto agregado")
+    #     continuar = input("Agregar otro producto? Y/N")
+    #     if continuar == "y":
+    #         self.agregar_producto()
         
     def agregar_a_inventario(self, producto):
         self.inventario.append(producto)
@@ -104,5 +104,8 @@ class Tienda:
     
 
 four_geeks = Tienda("4geeks")
-four_geeks.agregar_producto()
-print(four_geeks.inventario)
+print(four_geeks.agregar_a_inventario(telefono))
+print(four_geeks.agregar_a_inventario(producto_hogar))
+print(four_geeks.agregar_a_inventario(converse))
+# four_geeks.agregar_producto()
+# print(four_geeks.inventario)
